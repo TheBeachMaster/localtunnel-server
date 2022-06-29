@@ -43,6 +43,9 @@ const server = CreateServer({
 ### Usage
 - On your heroku app, under **Settings**>**Confg Vars** add the variable `DOMAIN` to point to your app domain as `myapp.herokuapp.com` or `my.subdomain.tld` etc - READ MORE BELOW THIS WARNING.
 
+
+> Some reason I could not get Heroku to run on the original script and file, so I have modified them,copied the file and preserved it with `.disabled` extension.
+
 # End
 
 # localtunnel-server

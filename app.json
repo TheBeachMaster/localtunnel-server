@@ -1,0 +1,10 @@
+{
+    "description": "Localtunnel Server",
+    "formation": {
+        "web": {
+            "quantity": 1
+        }
+    },
+    "name": "Local-Tunnel-Server",
+    "stack": "heroku-20"
+}

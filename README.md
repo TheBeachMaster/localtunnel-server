@@ -1,3 +1,50 @@
+# Here Be Dragons
+
+## CAVEAT EMPTOR
+This is a modified version of the [localtunnel/server](https://github.com/localtunnel/server) project.
+Tread carefully.
+
+**What has changed?**
+- HTTPS by default
+- Default Port
+- Change default domain
+- Added Heroku Procfile
+- Added Heroku app.json file
+- Profit [Add Deploy To Heroku]
+
+
+```diff
+    .options('secure', {
+-        default: false,
++        default: true,
+        describe: 'use this flag to indicate proxy over https'
+    })
+```
+
+```diff
+    .options('port', {
+-        default: '80',
++        default: process.env.PORT
+        describe: 'listen on this port for outside requests'
+    })
+```
+
+```diff
+const server = CreateServer({
+    max_tcp_sockets: argv['max-sockets'],
+    secure: argv.secure,
+-    domain: argv.domain,
++    domain: process.env.DOMAIN
+});
+```
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+### Usage
+- On your heroku app, under **Settings**>**Confg Vars** add the variable `DOMAIN` to point to your app domain as `myapp.herokuapp.com` or `my.subdomain.tld` etc - READ MORE BELOW THIS WARNING.
+
+# End
+
 # localtunnel-server
 
 [![Build Status](https://travis-ci.org/localtunnel/server.svg?branch=master)](https://travis-ci.org/localtunnel/server)

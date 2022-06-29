@@ -13,11 +13,11 @@ const debug = Debug('localtunnel');
 const argv = optimist
     .usage('Usage: $0 --port [num]')
     .options('secure', {
-        default: false,
+        default: true,
         describe: 'use this flag to indicate proxy over https'
     })
     .options('port', {
-        default: '80',
+        default: process.env.PORT,
         describe: 'listen on this port for outside requests'
     })
     .options('address', {
@@ -41,7 +41,7 @@ if (argv.help) {
 const server = CreateServer({
     max_tcp_sockets: argv['max-sockets'],
     secure: argv.secure,
-    domain: argv.domain,
+    domain: process.env.DOMAIN,
 });
 
 server.listen(argv.port, argv.address, () => {

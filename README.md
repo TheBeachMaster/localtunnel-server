@@ -10,7 +10,8 @@ Tread carefully.
 - Change default domain
 - Added Heroku Procfile
 - Added Heroku app.json file
-- Profit [Add Deploy To Heroku]
+- Profit [Add Deploy To Heroku button]
+- Set Node version to `14.1.x` for compatibility
 
 
 ```diff

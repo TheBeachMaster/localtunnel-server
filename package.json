@@ -4,6 +4,9 @@
   "description": "expose localhost to the world",
   "version": "0.0.8",
   "license": "MIT",
+  "engines": {
+    "node": "14.1.x"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/localtunnel/server.git"
